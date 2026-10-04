@@ -1,0 +1,128 @@
+[
+    {
+        "question": "What risks related to demand did NVIDIA mention in fiscal year 2024?",
+        "ticker": "NVDA",
+        "fiscal_year": "2024",
+        "evidence": "Failure to estimate customer demand accurately has led and could lead to mismatches between supply and demand."
+    },
+    {
+        "question": "How much did Nvidia spend to repurchase shares of their common stock in fiscal 2024?",
+        "ticker": "NVDA",
+        "fiscal_year": "2024",
+        "evidence": "we repurchased 21 million shares of our common stock for $9.7 billion"
+    },
+    {
+        "question": "How many shares of common stock were issued by Nvidia to employees of acquired companies in Dec 2024?",
+        "ticker": "NVDA",
+        "fiscal_year": "2025",
+        "evidence": "we issued a total of 205,110 shares of our common stock"
+    },
+    {
+        "question": "How many shares of common stock did Nvidia repurchase in fiscal 2025?",
+        "ticker": "NVDA",
+        "fiscal_year": "2025",
+        "evidence": "In fiscal year 2025, we repurchased 310 million shares of our common stock for $34.0 billion"
+    },
+    {
+        "question": "What did NVIDIA say about export restrictions affecting its data center products in fiscal 2026?",
+        "ticker": "NVDA",
+        "fiscal_year": "2026",
+        "evidence": "export restrictions and export licensing requirements targeting"
+    },
+    {
+        "question": "As of Jan 25 2026 how much were Nvidia's manufacturing, supply, and capacity commitments?",
+        "ticker": "NVDA",
+        "fiscal_year": "2026",
+        "evidence": "as of January 25, 2026, these commitments were $95.2 billion"
+    },
+    {
+        "question": "How much did Nvidia pay in cash dividend to shareholders in fiscal 2026?",
+        "ticker": "NVDA",
+        "fiscal_year": "2026",
+        "evidence": "In fiscal year 2026, we paid cash dividends to our shareholders of $974 million"
+    },
+    {
+        "question": "How much did Apple pay upfront under the accelerated share repurchase agreements in August 2023?",
+        "ticker": "AAPL",
+        "fiscal_year": "2023",
+        "evidence": "during the purchase periods in exchange for up-front payments totaling $5.0 billion"
+    },
+    {
+        "question": "What percentage of Apple's total net sales in fiscal 2023 came through direct and indirect distribution channels in 2023?",
+        "ticker": "AAPL",
+        "fiscal_year": "2023",
+        "evidence": "net sales through its direct and indirect distribution channels accounted for 37% and 63%, respectively, of total net sales"
+    },
+    {
+        "question": "How much of Apple's revenue recognized in 2023 had previously been recorded as deferred revenue?",
+        "ticker": "AAPL",
+        "fiscal_year": "2023",
+        "evidence": "8.2 billion of revenue recognized in 2023 that was included in deferred revenue as of September 24, 2022"
+    },
+    {
+        "question": "What caused Apple's net sales in Europe in 2024 compared to 2023?",
+        "ticker": "AAPL",
+        "fiscal_year": "2024",
+        "evidence": "Europe net sales increased during 2024 compared to 2023 due primarily to higher net sales of Services and iPhone"
+    },
+    {
+        "question": "How much of the Irish state aid recovery was held in escrow by Apple as of September 2024?",
+        "ticker": "AAPL",
+        "fiscal_year": "2024",
+        "evidence": "the adjusted recovery amount of \u20ac12.7\u00a0billion plus interest of \u20ac1.2\u00a0billion was held in escrow"
+    },
+    {
+        "question": "How much did the European Commission fine Apple in 2025 under the Article 5(4) investigation?",
+        "ticker": "AAPL",
+        "fiscal_year": "2025",
+        "evidence": "500 million in the Article 5(4) Investigation"
+    },
+    {
+        "question": "What potential impact could U.S. tariffs and other trade measures have on Apple in fiscal 2025?",
+        "ticker": "AAPL",
+        "fiscal_year": "2025",
+        "evidence": " the availability of rare earths and other raw materials and components"
+    },
+    {
+        "question": "What caused the decrease in Microsoft's effective tax rate from 2023 to 2024?",
+        "ticker": "MSFT",
+        "fiscal_year": "2024",
+        "evidence": "primarily due to tax benefits from tax law changes"
+    },
+    {
+        "question": "How much did Microsoft spend on its acquisition of Activision Blizzard?",
+        "ticker": "MSFT",
+        "fiscal_year": "2024",
+        "evidence": "our acquisition of Activision Blizzard for a total purchase price of $75.4 billion"
+    },
+    {
+        "question": "What drove Microsoft's revenue growth in fiscal 2024?",
+        "ticker": "MSFT",
+        "fiscal_year": "2024",
+        "evidence": "Revenue increased $33.2 billion or 16% driven by growth across each of our segments"
+    },
+    {
+        "question": "Why does Microsoft say customer use of its AI products can create security and execution risks?",
+        "ticker": "MSFT",
+        "fiscal_year": "2025",
+        "evidence": " may deploy them in high-risk scenarios or utilize them inappropriately"
+    },
+    {
+        "question": "How many shares of common stock were issued by Microsoft to the seller in May 2025 as consideration for an acquisition?",
+        "ticker": "MSFT",
+        "fiscal_year": "2025",
+        "evidence": "we issued 117,623 shares of common stock to the seller"
+    },
+    {
+        "question": "Why did Microsoft gross margin percentage decrease in 2026?",
+        "ticker": "MSFT",
+        "fiscal_year": "2026",
+        "evidence": "driven by continued investments in AI infrastructure and growing AI product usage"
+    },
+    {
+        "question": "As of June 2026 how much has Microsoft accrued in aggregate legal liabilities?",
+        "ticker": "MSFT",
+        "fiscal_year": "2026",
+        "evidence": "As of June 30, 2026, we accrued aggregate legal liabilities of"
+    }
+]
