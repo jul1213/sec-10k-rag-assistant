@@ -2,6 +2,7 @@ import os
 from google import genai
 from dotenv import load_dotenv
 from store import CHROMADB_PATH, MODEL_NAME, COLLECTION_NAME, get_collection
+from retrieve import make_vector_retriever
 
 load_dotenv()
 
@@ -24,7 +25,7 @@ def format_excerpts(results):
         lines.append(f"Excerpt {i} [{label}]:\n{doc}")
     return "\n\n".join(lines)
 
-def answer_question(question, collection, client, k=5, ticker=None, fiscal_year=None):
+def answer_question(question, retrieve, client, k=5, ticker=None, fiscal_year=None):
     conditions = []
     if ticker:
         conditions.append({"ticker": ticker})
@@ -36,11 +37,7 @@ def answer_question(question, collection, client, k=5, ticker=None, fiscal_year=
     elif len(conditions) > 1:
         where = {"$and": conditions}
     
-    results = collection.query(
-        query_texts=[question],
-        n_results=k,
-        where=where
-    )
+    results = retrieve(question, k, where)
     prompt = PROMPT_TEMPLATE.format(
         excerpts=format_excerpts(results),
         question=question
@@ -53,14 +50,12 @@ def answer_question(question, collection, client, k=5, ticker=None, fiscal_year=
 
 def main():
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-    collection = get_collection(MODEL_NAME, COLLECTION_NAME, CHROMADB_PATH)
 
-    # question = "What is NVIDIA's main source of revnue?"
-    # answer, results = answer_question(question, collection, client)
-    # print(answer)
+    collection = get_collection(MODEL_NAME, COLLECTION_NAME, CHROMADB_PATH)
+    vector_retriever = make_vector_retriever(collection)
     
     question = "What are the main sources of revenue?"
-    answer, results = answer_question(question, collection, client)
+    answer, results = answer_question(question, vector_retriever, client)
     print(answer)
     print([(m["ticker"], m["item"]) for m in results["metadatas"][0]])
 
