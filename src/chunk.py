@@ -8,16 +8,9 @@ TARGET_SIZE = 350
 OVERLAP_SIZE = 75
 
 def build_overlap_seed(current_chunk, overlap_size):
-    seed = []
-    seed_size = 0
-    for chunk in reversed(current_chunk):
-        if seed_size >= overlap_size:
-            break
-        seed.append(chunk)
-        seed_size += len(chunk.split())
-    seed.reverse()
-
-    return seed, seed_size
+    words = " ".join(current_chunk).split()
+    seed_words = words[-overlap_size:]
+    return [" ".join(seed_words)], len(seed_words)
 
 def chunk_text(text, target_size, overlap_size) :
     paras = text.split("\n")
@@ -63,7 +56,7 @@ def chunk_text(text, target_size, overlap_size) :
     return chunks
 
 def main():
-    with open(MANUAL_PATH, "r") as f:
+    with open(MANUAL_PATH, "r", encoding="utf-8") as f:
         filings = json.load(f)
     
     # section = filings[0]
