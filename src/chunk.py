@@ -17,40 +17,43 @@ def chunk_text(text, target_size, overlap_size) :
     chunks = []     # list of string
     current_chunk = []
     current_size = 0
+    seed_only = False # true only when current_chunk == overlap 
 
     for para in paras:
-        if len(para.split()) > target_size:
-            # flush chunk from before
-            if current_chunk:
+        n = len(para.split())
+
+        # big para > target_size
+        if n > target_size:
+            if current_chunk and not seed_only:
                 chunks.append(" ".join(current_chunk))
                 current_chunk, current_size = build_overlap_seed(current_chunk, overlap_size) 
 
             words = para.split()
             while words:
                 remain_size = target_size - current_size
-                if remain_size <= 0:
-                    current_chunk, current_size = [], 0
-                    remain_size = target_size
-
                 piece_words = words[:remain_size]
                 current_chunk.append(" ".join(piece_words))
                 chunks.append(" ".join(current_chunk))
 
                 words = words[remain_size:]
-                seed_words = piece_words[-overlap_size:]   # last N words of the piece just made
-                current_chunk = [" ".join(seed_words)]
-                current_size = len(seed_words)
+                current_chunk, current_size = build_overlap_seed(current_chunk, overlap_size) 
+                seed_only = True
             continue
 
-        if current_size + len(para.split()) > target_size and current_chunk:
-            chunks.append(" ".join(current_chunk))
-            current_chunk, current_size = build_overlap_seed(current_chunk, overlap_size)
+        # small para, check if can fit with current_chunk
+        if current_size + n > target_size and current_chunk:
+            if not seed_only:
+                chunks.append(" ".join(current_chunk))
+                current_chunk, current_size = build_overlap_seed(current_chunk, overlap_size)
+            else:
+                current_chunk, current_size = [], 0 # drop bare seed, start fresh
         
         current_chunk.append(para)
-        current_size += len(para.split())
+        current_size += n
+        seed_only = False
 
     # final flush
-    if current_chunk:
+    if current_chunk and not seed_only:
         chunks.append(" ".join(current_chunk))
 
     return chunks

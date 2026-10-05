@@ -17,18 +17,21 @@ def embed_and_save(collection, chunks):
             "section_name": chunk["section_name"],
         }
         metadatas.append(metadata)
-
-    collection.upsert(
-        ids=ids,
-        documents=documents,
-        metadatas=metadatas
-    )
+    
+    BATCH = 100
+    for i in range(0, len(ids), BATCH):
+        collection.upsert(
+            ids=ids[i:i+BATCH],
+            documents=documents[i:i+BATCH],
+            metadatas=metadatas[i:i+BATCH]
+        )
+        print(f"{min(i + BATCH, len(ids))}/{len(ids)}", flush=True)
     return collection
 
 def run_embedding(model_name, collection_name, chunks_path, db_path):
     collection = get_collection(model_name, collection_name, db_path)
 
-    with open(CHUNKS_PATH, "r") as f:
+    with open(chunks_path, "r", encoding="utf-8") as f:
         chunks = json.load(f)
 
     return embed_and_save(collection, chunks)
