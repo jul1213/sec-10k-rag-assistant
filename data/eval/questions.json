@@ -6,10 +6,22 @@
         "evidence": "Failure to estimate customer demand accurately has led and could lead to mismatches between supply and demand."
     },
     {
+        "question": "How much of Nvidia's revenue in fiscal 2024 was from sales outside of the US?",
+        "ticker": "NVDA",
+        "fiscal_year": "2024",
+        "evidence": "and we generated 56% of our revenue in fiscal year 2024 from sales outside of the United States"
+    },
+    {
         "question": "How much did Nvidia spend to repurchase shares of their common stock in fiscal 2024?",
         "ticker": "NVDA",
         "fiscal_year": "2024",
         "evidence": "we repurchased 21 million shares of our common stock for $9.7 billion"
+    },
+    {
+        "question": "Has the conflict in Israel affected Nvidia's operations in fiscal 2025?",
+        "ticker": "NVDA",
+        "fiscal_year": "2025",
+        "evidence": "monitoring the impact of the geopolitical conflict in and around Israel on our operations"
     },
     {
         "question": "How many shares of common stock were issued by Nvidia to employees of acquired companies in Dec 2024?",
@@ -24,13 +36,25 @@
         "evidence": "In fiscal year 2025, we repurchased 310 million shares of our common stock for $34.0 billion"
     },
     {
+        "question": "What drove NVIDIA's revenue growth in fiscal 2025?",
+        "ticker": "NVDA",
+        "fiscal_year": "2025",
+        "evidence": "driven by data center compute and networking platforms for accelerated computing and AI solutions"
+    },
+    {
+        "question": "What is the maximum amount of commercial paper Nvidia is allowed to issue under its program in fiscal 2025",
+        "ticker": "NVDA",
+        "fiscal_year": "2025",
+        "evidence": "575 million commercial paper program to support general corporate purposes"
+    },
+    {
         "question": "What did NVIDIA say about export restrictions affecting its data center products in fiscal 2026?",
         "ticker": "NVDA",
         "fiscal_year": "2026",
         "evidence": "export restrictions and export licensing requirements targeting"
     },
     {
-        "question": "As of Jan 25 2026 how much were Nvidia's manufacturing, supply, and capacity commitments?",
+        "question": "What were Nvidia's manufacturing, supply, and capacity commitments at the end of fiscal 2026?",
         "ticker": "NVDA",
         "fiscal_year": "2026",
         "evidence": "as of January 25, 2026, these commitments were $95.2 billion"
@@ -42,10 +66,22 @@
         "evidence": "In fiscal year 2026, we paid cash dividends to our shareholders of $974 million"
     },
     {
+        "question": "What was NVIDIA's reported goodwill balance in fiscal 2026?",
+        "ticker": "NVDA",
+        "fiscal_year": "2026",
+        "evidence": "20.8 billion, consisting of goodwill balances allocated to our Compute & Networking and Graphics"
+    },
+    {
         "question": "How much did Apple pay upfront under the accelerated share repurchase agreements in August 2023?",
         "ticker": "AAPL",
         "fiscal_year": "2023",
         "evidence": "during the purchase periods in exchange for up-front payments totaling $5.0 billion"
+    },
+    {
+        "question": "How much did Apple spend to repurchase its common stock in 2023?",
+        "ticker": "AAPL",
+        "fiscal_year": "2023",
+        "evidence": "76.6 billion of its common stock"
     },
     {
         "question": "What percentage of Apple's total net sales in fiscal 2023 came through direct and indirect distribution channels in 2023?",
@@ -60,6 +96,18 @@
         "evidence": "8.2 billion of revenue recognized in 2023 that was included in deferred revenue as of September 24, 2022"
     },
     {
+        "question": "Why did Apple's net sales in Japan decrease in fiscal 2023?",
+        "ticker": "AAPL",
+        "fiscal_year": "2023",
+        "evidence": "weakness in the yen relative to the U.S. dollar"
+    },
+    {
+        "question": "How many full-time employees did Apple report in fiscal 2023?",
+        "ticker": "AAPL",
+        "fiscal_year": "2023",
+        "evidence": "had approximately 161,000 full-time equivalent"
+    },
+    {
         "question": "What caused Apple's net sales in Europe in 2024 compared to 2023?",
         "ticker": "AAPL",
         "fiscal_year": "2024",
@@ -72,6 +120,12 @@
         "evidence": "the adjusted recovery amount of \u20ac12.7\u00a0billion plus interest of \u20ac1.2\u00a0billion was held in escrow"
     },
     {
+        "question": "How much did Apple report as outstanding commercial paper in fiscal 2024?",
+        "ticker": "AAPL",
+        "fiscal_year": "2024",
+        "evidence": "10.0 billion of commercial paper outstanding"
+    },
+    {
         "question": "How much did the European Commission fine Apple in 2025 under the Article 5(4) investigation?",
         "ticker": "AAPL",
         "fiscal_year": "2025",
@@ -82,6 +136,18 @@
         "ticker": "AAPL",
         "fiscal_year": "2025",
         "evidence": " the availability of rare earths and other raw materials and components"
+    },
+    {
+        "question": "How much future interest will Apple pay on its outstanding Notes as reported in fiscal 2025?",
+        "ticker": "AAPL",
+        "fiscal_year": "2025",
+        "evidence": "Future interest payments associated with the Notes total $37.0 billion"
+    },
+    {
+        "question": "How much did Microsoft pledge to support black and african american-owned businesses in fiscal 2024?",
+        "ticker": "MSFT",
+        "fiscal_year": "2024",
+        "evidence": "150 million in Minority Depository Institutions and funds supporting Black and African American-owned small businesses"
     },
     {
         "question": "What caused the decrease in Microsoft's effective tax rate from 2023 to 2024?",
@@ -112,6 +178,24 @@
         "ticker": "MSFT",
         "fiscal_year": "2025",
         "evidence": "we issued 117,623 shares of common stock to the seller"
+    },
+    {
+        "question": "By how much did LinkedIn revenue increase in fiscal 2025?",
+        "ticker": "MSFT",
+        "fiscal_year": "2025",
+        "evidence": "LinkedIn revenue increased 9%"
+    },
+    {
+        "question": "Why did Microsoft's operating cash flow increase in fiscal 2025?",
+        "ticker": "MSFT",
+        "fiscal_year": "2025",
+        "evidence": "primarily due to an increase in cash received from customers, offset in part by an increase in cash paid to suppliers"
+    },
+    {
+        "question": "How many full-time employees did Microsoft report in fiscal 2026?",
+        "ticker": "MSFT",
+        "fiscal_year": "2026",
+        "evidence": "we employed approximately 223,000 people on a full-time basis"
     },
     {
         "question": "Why did Microsoft gross margin percentage decrease in 2026?",
