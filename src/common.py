@@ -1,5 +1,4 @@
 import re
-from bs4 import BeautifulSoup
 from sec_parser import TreeNode
 
 SECTION_ITEMS = {

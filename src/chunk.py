@@ -58,17 +58,10 @@ def chunk_text(text, target_size, overlap_size) :
 
     return chunks
 
-def main():
-    with open(MANUAL_PATH, "r", encoding="utf-8") as f:
-        filings = json.load(f)
-    
-    # section = filings[0]
-    # for i, c in enumerate(chunk_text(section["text"], TARGET_SIZE, OVERLAP_SIZE)):
-    #     print(i, ":", c)
-
+def build_chunks(filings, target_size, overlap_size):
     chunks = []
     for section in filings:
-        this_chunks = chunk_text(section["text"], TARGET_SIZE, OVERLAP_SIZE)
+        this_chunks = chunk_text(section["text"], target_size, overlap_size)
 
         ticker = section["ticker"]
         fiscal_year = section["fiscal_year"]
@@ -85,6 +78,15 @@ def main():
                 "chunk_index": ind,
                 "text": chunk,
             })
+
+    return chunks
+
+
+def main():
+    with open(MANUAL_PATH, "r", encoding="utf-8") as f:
+        filings = json.load(f)
+
+    chunks = build_chunks(filings, TARGET_SIZE, OVERLAP_SIZE)
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
