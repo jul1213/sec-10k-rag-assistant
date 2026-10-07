@@ -1,8 +1,4 @@
-import os
-from google import genai
 from dotenv import load_dotenv
-from store import CHROMADB_PATH, MODEL_NAME, COLLECTION_NAME, get_collection
-from retrieve import make_vector_retriever
 
 load_dotenv()
 
@@ -47,29 +43,3 @@ def answer_question(question, retrieve, client, k=5, ticker=None, fiscal_year=No
         input=prompt
     )
     return interaction.output_text, results
-
-def main():
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-
-    collection = get_collection(MODEL_NAME, COLLECTION_NAME, CHROMADB_PATH)
-    vector_retriever = make_vector_retriever(collection)
-    
-    question = "What are the main sources of revenue?"
-    answer, results = answer_question(question, vector_retriever, client)
-    print(answer)
-    print([(m["ticker"], m["item"]) for m in results["metadatas"][0]])
-
-    question_aapl = "What are the main sources of revenue?"
-    answer_aapl, results_aapl = answer_question(question_aapl, collection, client, ticker="AAPL")
-    print(answer_aapl)
-    print([(m["ticker"], m["item"]) for m in results_aapl["metadatas"][0]])
-
-    question_nvda = "What are the main sources of revenue?"
-    answer_nvda, results_nvda = answer_question(question_nvda, collection, client, ticker="NVDA")
-    print(answer_nvda)
-    print([(m["ticker"], m["item"]) for m in results_nvda["metadatas"][0]])
-
-
-
-if __name__ == "__main__":
-    main()

@@ -39,15 +39,6 @@ def run_embedding(model_name, collection_name, chunks_path, db_path):
 def main():
     run_embedding(MODEL_NAME, COLLECTION_NAME, CHUNKS_PATH, CHROMADB_PATH)
 
-    # results = collection.query(
-    #     query_texts=["What is NVDIA's main sources of revenue?"],
-    #     n_results=2
-    # )
-    # for i, document in enumerate(results["documents"][0]):
-    #     print(f"\n--- Result {i + 1} ---")
-    #     print(document)
-    #     print("Distance:", results["distances"][0][i])
-
 
 
 if __name__ == "__main__":

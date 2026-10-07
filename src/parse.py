@@ -10,6 +10,15 @@ OUT_PATH = Path(__file__).resolve().parent.parent / "data" / "processed" / "fili
 
 FILENAME_RE = re.compile(r"^([A-Z]+)_(\d{4})\.html?$", re.IGNORECASE)
 
+def parse(html_path):
+    with open(html_path, "r", encoding="utf-8", errors="ignore") as f:
+                html = f.read()
+    
+    elements = Edgar10KParser().parse(html)
+    tree = TreeBuilder().build(elements)
+    
+    return get_sections(tree)
+
 
 def main():
     if not MANUAL_DIR.exists() or not any(MANUAL_DIR.iterdir()):
@@ -25,17 +34,11 @@ def main():
             continue
 
         ticker, fiscal_year = m.group(1).upper(), m.group(2)
-
-        with open(html_path, "r", encoding="utf-8", errors="ignore") as f:
-            html = f.read()
-
-        elements = Edgar10KParser().parse(html)
-        tree = TreeBuilder().build(elements)
-        sections = get_sections(tree)
+        
+        sections = parse(html_path)
 
         if not sections:
-            print(f"  [!] no sections matched in {html_path.name} — "
-                  f"open it and check it's the actual 10-K body, not a cover page or exhibit")
+            print(f"  [!] no sections matched in {html_path.name}")
 
         for item_num, section_text in sections.items():
             records.append({
