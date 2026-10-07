@@ -7,7 +7,8 @@ CHUNK_DIR = Path(__file__).resolve().parent.parent / "data" / "chunked"
 CHECKS = [
     ("BAAI/bge-small-en-v1.5", 250),
     ("BAAI/bge-small-en-v1.5", 350),
-    ("MongoDB/mdbr-leaf-mt", 350),
+    ("thenlper/gte-small", 250),
+    ("thenlper/gte-small", 350),
 ]
 
 for model_name, size in CHECKS:

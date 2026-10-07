@@ -21,7 +21,7 @@ st.title("SEC 10-K Assistant")
 st.caption("Answers are grounded in the retrieved excerpts, with citations.")
 
 question = st.text_input(
-    "Question", placeholder="What are Apple's net sales by product category?"
+    "What would you like to know about the filings?", placeholder="What are Apple's net sales by product category?"
 )
 
 with st.expander("Settings", expanded=True):
