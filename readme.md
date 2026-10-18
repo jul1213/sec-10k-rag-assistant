@@ -20,11 +20,11 @@ Parser (sec-parser) -> chunk (350 words, 75-word overlap) -> embed (bge-small, C
 
 
 ## Results
-### Baseline (filtered, k=5)
+### Baseline (filtered)
 Recall@k measures whether the relevant evidence appears within the top-k retrieved chunks.
 MRR (Mean Reciprocal Rank) measures how highly the first relevant chunk is ranked, with higher scores indicating that relevant evidence tends to appear earlier.
 
-| Method | Recall@5 | MRR | Recall@30 |
+| Method | Recall@5 | MRR@5 | Recall@30 |
 |---|---|---|---|
 | Vector | 22/35 (0.63) | 0.45 | 33/35 |
 | BM25 | 29/35 (0.83) | 0.73 | 34/35 |
